@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public class MovementSet {
 
+    /**
+     * This factory method, creates a new MovementSet that contains
+     * the movements known as UP, DOWN, RIGHT & LEFT.
+     * @return the new movement set.
+     */
     public static MovementSet createFourDirectionMovementSet() {
         MovementSet movementSet = new MovementSet();
 
