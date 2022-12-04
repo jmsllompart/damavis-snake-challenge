@@ -26,6 +26,6 @@ public class NaiveRecursiveSnakePathsCalculator implements ISnakePathsCalculator
             if (snakeMovementValidator.isValidMovement(board, snake, movement))
                 numberOfPossiblePaths += calculateNumberOfPossiblePaths(board, snakeMovementStrategy.moveSnake(snake, movement), depth - 1);
 
-        return numberOfPossiblePaths;
+        return numberOfPossiblePaths % (1000000000 + 7);
     }
 }
