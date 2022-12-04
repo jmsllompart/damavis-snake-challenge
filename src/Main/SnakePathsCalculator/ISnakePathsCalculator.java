@@ -1,5 +1,5 @@
 package Main.SnakePathsCalculator;
 
-public interface SnakePathsCalculatorStrategy {
+public interface ISnakePathsCalculator {
     int calculateNumberOfPossiblePaths(int[] board, int[][] snake, int depth);
 }

@@ -1,11 +1,11 @@
 package Test;
 
-import Main.SnakePathsCalculator.NaiveRecursiveStrategy;
-import Main.SnakePathsCalculator.SnakePathsCalculatorStrategy;
+import Main.SnakePathsCalculator.NaiveRecursiveSnakePathsCalculator;
+import Main.SnakePathsCalculator.ISnakePathsCalculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class SnakePathsCalculatorStrategyTest {
+class NaiveRecursiveSnakePathsCalculatorTest {
 
     @Test
     void calculateNumberOfPossiblePaths() {
@@ -20,7 +20,7 @@ class SnakePathsCalculatorStrategyTest {
 
         int [] results = {7, 1, 81};
 
-        SnakePathsCalculatorStrategy snakePathsCalculator = new NaiveRecursiveStrategy();
+        ISnakePathsCalculator snakePathsCalculator = new NaiveRecursiveSnakePathsCalculator();
 
         Assertions.assertAll(() -> Assertions.assertEquals(results[0], snakePathsCalculator.calculateNumberOfPossiblePaths(boards[0], snakes[0], depths[0])),
                 () -> Assertions.assertEquals(results[1], snakePathsCalculator.calculateNumberOfPossiblePaths(boards[1], snakes[1], depths[1])),
