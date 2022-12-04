@@ -1,6 +1,6 @@
 package Main.SnakeMovementsStrategies;
 
-import Main.Uitls.Movement;
+import Main.Movements.Movement;
 
 public interface SnakeMovementStrategy {
     int[][] moveSnake(int[][] snake, Movement movement);

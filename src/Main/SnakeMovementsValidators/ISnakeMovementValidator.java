@@ -1,6 +1,6 @@
 package Main.SnakeMovementsValidators;
 
-import Main.Uitls.Movement;
+import Main.Movements.Movement;
 
 public interface ISnakeMovementValidator {
     boolean isValidMovement(int[] board, int [][] snake, Movement movement);

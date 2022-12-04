@@ -2,24 +2,19 @@ package Main.SnakePathsCalculator;
 
 import Main.SnakeMovementsStrategies.DefaultSnakeMovementStrategy;
 import Main.SnakeMovementsStrategies.SnakeMovementStrategy;
-import Main.Uitls.Movement;
+import Main.Movements.Movement;
 import Main.SnakeMovementsValidators.*;
+import Main.Movements.MovementSet;
 
 public class NaiveRecursiveSnakePathsCalculator implements ISnakePathsCalculator {
     private final ISnakeMovementValidator snakeMovementValidator;
     private final SnakeMovementStrategy snakeMovementStrategy;
-
-
-    Movement[] possibleMovements = {new Movement(1, 0),
-                                    new Movement(0, 1),
-                                    new Movement(-1, 0),
-                                    new Movement(0, -1)};
-
+    private final MovementSet possibleMovements;
 
     public NaiveRecursiveSnakePathsCalculator() {
-
         snakeMovementValidator = new DefaultSnakeMovementValidator();
         snakeMovementStrategy = new DefaultSnakeMovementStrategy();
+        possibleMovements = MovementSet.createFourDirectionMovementSet();
     }
 
     @Override
@@ -28,7 +23,7 @@ public class NaiveRecursiveSnakePathsCalculator implements ISnakePathsCalculator
 
         int numberOfPossiblePaths = 0;
 
-        for (Movement movement : this.possibleMovements)
+        for (Movement movement : this.possibleMovements.getMovements())
             if (snakeMovementValidator.isValidMovement(board, snake, movement))
                 numberOfPossiblePaths += calculateNumberOfPossiblePaths(board, snakeMovementStrategy.moveSnake(snake, movement), depth - 1);
 

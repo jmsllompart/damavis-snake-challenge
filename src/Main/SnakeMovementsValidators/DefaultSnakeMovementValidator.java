@@ -1,6 +1,6 @@
 package Main.SnakeMovementsValidators;
 
-import Main.Uitls.Movement;
+import Main.Movements.Movement;
 import Main.Uitls.NumericUtils;
 
 public class DefaultSnakeMovementValidator implements ISnakeMovementValidator{
