@@ -1,6 +1,5 @@
 package Test;
 
-import Main.Movements.Movement;
 import Main.Movements.MovementSet;
 import Main.SnakeMovementsStrategies.DefaultSnakeMovementStrategy;
 import Main.SnakeMovementsStrategies.SnakeMovementStrategy;
